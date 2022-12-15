@@ -301,15 +301,26 @@ header .inner .gnb .lang li:nth-child(2)::before{
 }
 .survey .inner .survey__right form{
   width: 100%;
-  padding: 20px;
+  /* padding: 20px; */
   box-sizing: border-box;
 }
-.survey__right .input-box li {
+.survey__right .input-box {
   width: 100%;
 }
-
-
-
+.survey__right .input-box li {
+  display: flex;
+}
+.survey__right .input-box li label{
+  width: 160px;
+  color: #fff;
+  font-size: 18px;
+}
+.survey__right .input-box li label span {
+  color: #2888f4;
+}
+.survey__right .input-box li input {
+  flex-grow: 1;
+}
 
 
 
@@ -338,11 +349,24 @@ footer .ft_inner .ft_top .ft_top__left {
 }
 footer .ft_inner .ft_top .ft_top__left > li + li {
   padding-left: 30px;
+  position: relative;
+}
+footer .ft_inner .ft_top .ft_top__left > li + li::before{
+  content: '';
+  display: block;
+  width: 1px;
+  height: 8px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
 }
 footer .ft_inner .ft_top .ft_top__left > li > a {
   color: #eee;
   font-size: 14px;
 }
+
 
 footer .ft_inner .ft_bottom {
   display: flex;
