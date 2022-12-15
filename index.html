@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- 문자 인코딩 방식: 유니코드 -->
+    <meta charset="UTF-8">
+    <!-- 최신 IE 브라우저의 렌더링 방식을 사용하겠다는 의미 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 모바일 디바이스에서 웹페이지가 표시되는 방식 지정 -->
+    <!-- 뷰포트 너비를 다양한 모바일 디바이스의 가로 너비와 일치시키고, 화면의 확대/축소 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- 오픈 그래프와 트위터 카드 설정 -->
+    <!-- 웹페이지가 검색엔진에서 검색되거나 카카오톡이나 트위터 같은 소셜미디어에 공유될 때 필요한 정보를 제공 -->
+    <!-- 오픈 그래프 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Heropy Coffee" />
+    <meta property="og:title" content="Heropy Coffee Landing" />
+    <meta property="og:description" content="헤로피커피는 세계에서 가장 큰 다국적 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다." />
+    <meta property="og:image" content="./images/for_seo.jpg" />
+    <meta property="og:url" content="https://epic-darwin-271c77.netlify.app" />
+    <!-- 트위터 카드 -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="Heropy Coffeee" />
+    <meta property="twitter:title" content="Heropy Coffee Landing" />
+    <meta property="twitter:description" content="헤로피커피는 세계에서 가장 큰 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다." />
+    <meta property="twitter:image" content="./images/for_seo.jpg" />
+    <meta property="twitter:url" content="https://epic-darwin-271c77.netlify.app" />
+  
+    <title>Star Coffee</title>
+  
+    <!-- 파비콘은 프로젝트 폴더의 최상위(Root) 경로에 포함시키면 자동 적용, 최상위 경로에 없으면 link로 적용 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  
+    <!-- 구글 웹폰트 연결 -->
+    <!-- 구글 웹폰트: 경량화된 오픈 라이선스 폰트, 한글 지원하는지 확인 및 필요한 굵기만 선택해서 연결 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  
+    <!-- 구글 머티리얼 아이콘 연결 -->
+    <!-- 구글에서 제공하는 머티리얼 스타일의 아이콘, 글자처럼 취급 가능한 장점 -->
+    <!-- 그 외 fontawesome, bootstrap icon 등 다양함 -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+        rel="stylesheet">
+  
+    <!-- 스타일 초기화: 브라우저 별로 다른 기본스타일이 적용되는 것을 초기화 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- 슬라이드 라이브러리 Swiper.js 연결 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- gsap cdn 연결하기 :  순서 주의 (main.js에서 사용하니까 더 앞에 위치) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ScrollMagic.js 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- ScrollToPlugin 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js" integrity="sha512-Eenw6RBFiF4rO89LCaB5fkd4WXI4Y7GSRxrLMMWx73dZNcl+dBU3/pJtITD2gTCoEGIf/Ph3spwp0zZnF+UEJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+    <script src="./js/main.js" defer></script>
+  </head>
+<body>
+    <!-- HEADER -->
+    <header>
+      <!-- .inner: 섹션의 내용을 가운데 정렬하려는 용도 -->
+      <div class="inner">
+        <!-- 로고를 클릭하면 메인 페이지로 이동하도록 절대경로 "/" 추가 -->
+        <!-- 예: https://abc.com/ 의 마지막 / 기호를 의미 -->
+        <h1>
+          <a href="javascript:void(0)" class="logo">
+            <img src="https://via.placeholder.com/80" alt="iwpaf" />
+          </a>
+        </h1>
+  
+        <!-- 메인 메뉴 -->
+        <div class="gnb">
+          <ul class="gnb__wrap">
+            <li class="gnb__inner">
+              <a href="javascript:void(0)" class="gnb__1depth">회사소개</a>
+              <div class="gnb__2depth_wrap">
+                <ul class="gnb__2depth">
+                  <li><a href="#">MISSION / VISION</a></li>
+                  <li><a href="#">대표소개</a></li>
+                  <li><a href="#">세계 속 나비프라</a></li>
+                  <li><a href="#">연혁</a></li>
+                  <li><a href="#">파트너</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="gnb__inner">
+              <a href="javascript:void(0)" class="gnb__1depth">기술서비스</a>
+              <div class="gnb__2depth_wrap">
+                <ul class="gnb__2depth">
+                  <li><a href="#">나비코어</a></li>
+                  <li><a href="#">나비브레인</a></li>
+                  <li><a href="#">나비인프라</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="gnb__inner">
+              <a href="javascript:void(0)" class="gnb__1depth">채용문의</a>
+              <div class="gnb__2depth_wrap">
+                <ul class="gnb__2depth">
+                  <li><a href="#">사내문화</a></li>
+                  <li><a href="#">채용홈페이지</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="gnb__inner">
+              <a href="javascript:void(0)" class="gnb__1depth">제휴문의</a>
+              <div class="gnb__2depth_wrap">
+                <ul class="gnb__2depth">
+                  <li><a href="#">문의하기</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="lang">
+            <li><a href="#">KOR</a></li>
+            <li><a href="#">ENG</a></li>
+          </ul>
+          <div class="gnb_hambur">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+          </div>
+          <div class="gnb_hambur_over">
+<!-- 여기부터 -->
+          </div>
+          <div class="bg_nav"></div>
+        </div>
+    </header>
+  
+<!-- MAIN -->
+  <section class="main-contain">
+    <div class="inner main-inner fade-in">
+      <div class="main-left">
+        <span class="sub-title main-sub-title">JOIN US</span>
+        <h2 class="title main-title">인천세계평화미술제와<br/>함께 나아갈 작가님을 기다립니다.</h2>
+        <p class="content main-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <div class="btn btn-more btn-main">
+          <a href="javascript:void(0)">
+            <span>LEARN MORE</span>
+          </a>
+        </div>
+      </div>
+      <div class="main-right">
+        <div class="container">
+          <div class="priority fade-in">
+            <span class="material-icons">lightbulb</span>
+            <h3>PRIORITY</h3>
+            <p class="strong">사람 중심의 조직</p>
+            <p>사람이 가장 중요하고 중심이 되는 조직</p>
+          </div>
+          <div class="teamwork fade-in">
+            <span class="material-icons">lightbulb</span>
+            <h3>TEAMWORK</h3>
+            <p class="strong">동료들과의 팀워크</p>
+            <p>각자의 역량을 집중하여 가치를 창출</p>
+          </div>
+          <div class="pride fade-in">
+            <span class="material-icons">lightbulb</span>
+            <h3>PRIDE</h3>
+            <p class="strong">자부심을 느끼는 조직</p>
+            <p>뛰어난 동료와 훌륭한 일을 하는 것에 자부심을 느끼는 조직</p>
+          </div>
+          <div class="innovation fade-in">
+            <span class="material-icons">lightbulb</span>
+            <h3>INNOVATION</h3>
+            <p class="strong">변화와 혁신</p>
+            <p>변화와 혁신을 두려워 하지 않는 조직</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SURVEY -->
+  <section class="survey">
+    <div class="inner">
+      <div class="survey__left">
+        <span class="sub-title">CONTACT</span>
+        <h2 class="title">IWPAF관련 기타 궁금하신 점을 문의해보세요.</h2>
+        <p class="content">서울특별시 강남구 테헤란로59길 oo빌딩 12층</p>
+        <div class="btn btn-more btn-main">
+          <a href="javascript:void(0)">
+            <span>LEARN MORE</span>
+          </a>
+        </div>
+      </div>
+      <div class="survey__right">
+        <form name="survey" method="post">
+          <ul class="input-box">
+            <li>
+              <label for="company">갤러리/작가명<span>*</span></label>
+              <input type="text" id="company">
+            </li>
+            <li>
+              <label for="name">성함<span>*</span></label>
+              <input type="text" id="name">
+            </li>
+            <li>
+              <label for="phonenumber">연락처<span>*</span></label>
+              <input type="text" id="phonenumber">
+            </li>
+            <li>
+              <label for="email">이메일<span>*</span></label>
+              <input type="text" id="email">
+            </li>
+            <li>
+              <label for="text-con">내용<span>*</span></label>
+              <input type="text" id="text-con">
+            </li>
+
+          </ul>
+          <div class="submit">
+            <div class="check">
+              <input type="checkbox" name="agree" id="check-agree" class="checkbox">
+              <label for="check-agree">개인정보처리방침에 동의합니다.</label>
+            </div>
+            <div class="btn btn-more btn-main">
+              <a href="javascript:void(0)">
+                <span>SUBMIT</span>
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+<!-- FOOTER -->
+  <footer>
+    <div class="ft_inner inner">
+      <div class="ft_top">
+        <ul class="ft_top__left">
+          <li><a href="javascript:void(0)">회사소개</a></li>
+          <li><a href="javascript:void(0)">이용약관</a></li>
+          <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+          <li><a href="javascript:void(0)">데이터바우처 지원사업</a></li>
+          <li><a href="javascript:void(0)">데이터 어노테이터 교육문의</a></li>
+        </ul>
+        <h1 class="ft_top__right">
+          <a href="javascript:void(0)" class="logo">
+            <img src="https://via.placeholder.com/80" alt="iwpaf" />
+          </a>
+        </h1>
+      </div>
+      <div class="ft_bottom">
+        <div class="info">
+          <span>iwpaf</span>
+          <span>사업자등록번호 123-45-678901</span>
+          <span>TEL : 02) 1234-5678 / FAX : 02) 1234-5678</span>
+          <span>개인정보 책임자 : 이선수</span>
+        </div>
+        <P class="copyright">
+          &copy; <span class="this-year"></span>
+          iwpaf Company. All Rights Reserved.
+        </P>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP -->
+  <div id="to-top">
+    <span class="material-icons">arrow_upward</span>
+  </div>
+
+
+
+</body>
+</html>
