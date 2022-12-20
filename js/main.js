@@ -68,3 +68,45 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
     .addTo(new ScrollMagic.Controller()); // 컨트롤러에 장면을 할당
 });
+
+// HEADER - MENU OPEN
+const gnbEl = document.querySelector('.gnb')
+const mainMenuEl = document.querySelector('.gnb__wrap');
+const subMenuEls = document.querySelectorAll('.gnb__2depth');
+const gnbBg = document.querySelector('.bg_nav');
+
+mainMenuEl.addEventListener('mouseover', function () {
+  // gnbEl.style.hight = '350px'
+  // gnbBg.style.opacity = '1';
+  gnbBg.style.height = '200px';
+
+  subMenuEls.forEach(function (subMenuEl) {
+    subMenuEl.style.opacity = '1';
+    subMenuEl.style.visibility = 'visible';
+  });
+});
+gnbEl.addEventListener('mouseleave', function () {
+  // gnbEl.style.height = '100px';
+  // gnbBg.style.opacity = '0';
+  // gnbBg.style.visibility = 'hidden';
+  gnbBg.style.height = '0px';
+  
+  subMenuEls.forEach(function (subMenuEl) {
+  subMenuEl.style.opacity = '0';
+  subMenuEl.style.visibility = 'hidden';
+});
+});
+
+// GALLERY - SWIPER
+new Swiper('.gallery .swiper', {
+  direction: 'horizontal',
+  loop: true, 
+  autoplay: {delay: 3000}, //
+  slidesPerView : 1, // 한 번에 보여줄 슬라이드 수
+  spaceBetween: 20, //슬라이드 사이 여백(간격) px
+  centeredSlides: true, // 1번 슬라이드가 가운데 보이기
+  navigation: { // 이전/다음 슬라이드 버튼 사용
+    nextEl: '.gallery .swiper-button-next',
+    prevEl: '.gallery .swiper-button-prev',
+  },
+});
