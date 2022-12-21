@@ -110,3 +110,23 @@ new Swiper('.gallery .swiper', {
     prevEl: '.gallery .swiper-button-prev',
   },
 });
+
+new Swiper('.main-contain .swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true, 
+  autoplay: {delay: 3000}, //
+  slidesPerView : 1, // 한 번에 보여줄 슬라이드 수
+  spaceBetween: 80, //슬라이드 사이 여백(간격) px
+  centeredSlides: true, // 1번 슬라이드가 가운데 보이기
+
+});
+
+// new Swiper(".mySwiper", {
+//   slidesPerView: 3,
+//   spaceBetween: 30,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+// });
