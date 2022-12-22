@@ -97,36 +97,29 @@ gnbEl.addEventListener('mouseleave', function () {
 });
 });
 
-// GALLERY - SWIPER
-new Swiper('.gallery .swiper', {
-  direction: 'horizontal',
-  loop: true, 
-  autoplay: {delay: 3000}, //
-  slidesPerView : 1, // 한 번에 보여줄 슬라이드 수
-  spaceBetween: 20, //슬라이드 사이 여백(간격) px
-  centeredSlides: true, // 1번 슬라이드가 가운데 보이기
-  navigation: { // 이전/다음 슬라이드 버튼 사용
-    nextEl: '.gallery .swiper-button-next',
-    prevEl: '.gallery .swiper-button-prev',
-  },
-});
+
 
 new Swiper('.main-contain .swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true, 
-  autoplay: {delay: 3000}, //
+  // autoplay: {delay: 3000},
   slidesPerView : 1, // 한 번에 보여줄 슬라이드 수
-  spaceBetween: 80, //슬라이드 사이 여백(간격) px
+  spaceBetween: 10, //슬라이드 사이 여백(간격) px
   centeredSlides: true, // 1번 슬라이드가 가운데 보이기
 
 });
 
-// new Swiper(".mySwiper", {
-//   slidesPerView: 3,
-//   spaceBetween: 30,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
+// GALLERY - SWIPER
+new Swiper('.recruit .swiper', {
+  direction: 'horizontal',
+  loop: true, 
+  autoplay: {delay: 3000}, //
+  slidesPerView : 2, // 한 번에 보여줄 슬라이드 수
+  spaceBetween: 20, //슬라이드 사이 여백(간격) px
+  centeredSlides: true, // 1번 슬라이드가 가운데 보이기
+  navigation: { // 이전/다음 슬라이드 버튼 사용
+    nextEl: '.recruit .swiper-button-next',
+    prevEl: '.recruit .swiper-button-prev',
+  },
+});
