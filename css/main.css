@@ -116,6 +116,12 @@ h3 {
 .back-to-position.to-right{
   transform: translateX(-150px);
 }
+.back-to-position.to-top {
+  transform: translateY(150px);
+}
+.back-to-position.to-bottom{
+  transform: translateY(-150px);
+}
 .show .back-to-position {
   opacity: 1;
   transform: translateX(0);
@@ -442,8 +448,10 @@ header .inner .gnb .lang li:nth-child(2)::before{
 .recruit .left p.content{
   text-align: left;
   margin-bottom: 10%;
+  padding-left: 0px;
 }
 .recruit .left p {
+  padding-left: 102px;
   margin-bottom: 20px;
 }
 .recruit .left .timer {
