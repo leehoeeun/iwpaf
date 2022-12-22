@@ -40,8 +40,7 @@
     <!-- 구글 머티리얼 아이콘 연결 -->
     <!-- 구글에서 제공하는 머티리얼 스타일의 아이콘, 글자처럼 취급 가능한 장점 -->
     <!-- 그 외 fontawesome, bootstrap icon 등 다양함 -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
   
     <!-- 스타일 초기화: 브라우저 별로 다른 기본스타일이 적용되는 것을 초기화 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
@@ -64,72 +63,70 @@
   </head>
 <body>
     <!-- HEADER -->
-    <header>
-      <!-- .inner: 섹션의 내용을 가운데 정렬하려는 용도 -->
-      <div class="inner">
-        <!-- 로고를 클릭하면 메인 페이지로 이동하도록 절대경로 "/" 추가 -->
-        <!-- 예: https://abc.com/ 의 마지막 / 기호를 의미 -->
-        <h1>
-          <a href="javascript:void(0)">
-            <img src="./images/main/logo_color.png" class="logo" alt="iwpaf" />
-          </a>
-        </h1>
-  
-        <!-- 메인 메뉴 -->
-        <div class="gnb">
-          <ul class="gnb__wrap">
-            <li class="gnb__inner">
-              <a href="javascript:void(0)" class="gnb__1depth">회사소개</a>
-              <div class="gnb__2depth_wrap">
-                <ul class="gnb__2depth">
-                  <li><a href="#">인사말</a></li>
-                  <li><a href="#">후원사/협력사</a></li>
-                  <li><a href="#">연혁</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="gnb__inner">
-              <a href="javascript:void(0)" class="gnb__1depth">행사소개</a>
-              <div class="gnb__2depth_wrap">
-                <ul class="gnb__2depth">
-                  <li><a href="#">전시회</a></li>
-                  <li><a href="#">포럼</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="gnb__inner">
-              <a href="javascript:void(0)" class="gnb__1depth">NEW소식</a>
-              <div class="gnb__2depth_wrap">
-                <ul class="gnb__2depth">
-                  <li><a href="#">뉴스</a></li>
-                  <li><a href="#">공지사항</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="gnb__inner">
-              <a href="javascript:void(0)" class="gnb__1depth">오시는 길</a>
-              <div class="gnb__2depth_wrap">
-                <ul class="gnb__2depth">
-                  <li><a href="#">찾아오시는 길</a></li>
-                  <li><a href="#">제휴문의</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-          <ul class="lang">
-            <li><a href="#">KOR</a></li>
-            <li><a href="#">ENG</a></li>
-          </ul>
-          <div class="gnb_hambur">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-          </div>
-          <div class="gnb_hambur_over">
-<!-- 여기부터 -->
-          </div>
-          <div class="bg_nav"></div>
+  <header>
+    <!-- .inner: 섹션의 내용을 가운데 정렬하려는 용도 -->
+    <div class="inner">
+      <!-- 로고를 클릭하면 메인 페이지로 이동하도록 절대경로 "/" 추가 -->
+      <!-- 예: https://abc.com/ 의 마지막 / 기호를 의미 -->
+      <h1>
+        <a href="javascript:void(0)">
+          <img src="./images/main/logo_color.png" class="logo" alt="iwpaf" />
+        </a>
+      </h1>
+      <!-- 메인 메뉴 -->
+      <nav class="gnb">
+        <ul class="gnb__wrap">
+          <li class="gnb__inner">
+            <a href="javascript:void(0)" class="gnb__1depth">회사소개</a>
+            <div class="gnb__2depth_wrap">
+              <ul class="gnb__2depth">
+                <li><a href="#">인사말</a></li>
+                <li><a href="#">후원사/협력사</a></li>
+                <li><a href="#">연혁</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnb__inner">
+            <a href="javascript:void(0)" class="gnb__1depth">행사소개</a>
+            <div class="gnb__2depth_wrap">
+              <ul class="gnb__2depth">
+                <li><a href="#">전시회</a></li>
+                <li><a href="#">포럼</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnb__inner">
+            <a href="javascript:void(0)" class="gnb__1depth">NEW소식</a>
+            <div class="gnb__2depth_wrap">
+              <ul class="gnb__2depth">
+                <li><a href="#">뉴스</a></li>
+                <li><a href="#">공지사항</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnb__inner">
+            <a href="javascript:void(0)" class="gnb__1depth">오시는 길</a>
+            <div class="gnb__2depth_wrap">
+              <ul class="gnb__2depth">
+                <li><a href="#">찾아오시는 길</a></li>
+                <li><a href="#">제휴문의</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <ul class="lang">
+          <li><a href="#">KOR</a></li>
+          <li><a href="#">ENG</a></li>
+        </ul>
+        <div class="gnb_hambur">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
         </div>
-    </header>
+        <div class="gnb_hambur_over">
+        </div>
+        <div class="bg_nav"></div>
+      </nav>
+  </header>
   
 <!-- MAIN -->
   <section class="main-contain">
@@ -150,43 +147,14 @@
         <div class="swiper slide-art">
           <div class="swiper-wrapper">
             <!-- Slides -->
+            <div class="swiper-slide"><img src="./images/main/main_img5.png" alt="art5"></div>
             <div class="swiper-slide"><img src="./images/main/main_img3.png" alt="art3"></div>
             <div class="swiper-slide"><img src="./images/main/main_img2.png" alt="art2"></div>
-            <div class="swiper-slide"><img src="./images/main/main_img5.png" alt="art5"></div>
             <div class="swiper-slide"><img src="./images/main/main_img4.png" alt="art4"></div>
             <div class="swiper-slide"><img src="./images/main/main_img1.png" alt="art1"></div>
           </div>
         </div>
       </div>
-
-      <!-- <div class="main-right">
-        <div class="container">
-          <div class="priority fade-in">
-            <span class="material-icons">lightbulb</span>
-            <h3>PRIORITY</h3>
-            <p class="strong">사람 중심의 조직</p>
-            <p>사람이 가장 중요하고 중심이 되는 조직</p>
-          </div>
-          <div class="teamwork fade-in">
-            <span class="material-icons">lightbulb</span>
-            <h3>TEAMWORK</h3>
-            <p class="strong">동료들과의 팀워크</p>
-            <p>각자의 역량을 집중하여 가치를 창출</p>
-          </div>
-          <div class="pride fade-in">
-            <span class="material-icons">lightbulb</span>
-            <h3>PRIDE</h3>
-            <p class="strong">자부심을 느끼는 조직</p>
-            <p>뛰어난 동료와 훌륭한 일을 하는 것에 자부심을 느끼는 조직</p>
-          </div>
-          <div class="innovation fade-in">
-            <span class="material-icons">lightbulb</span>
-            <h3>INNOVATION</h3>
-            <p class="strong">변화와 혁신</p>
-            <p>변화와 혁신을 두려워 하지 않는 조직</p>
-          </div>
-        </div>
-      </div> -->
     </div>
   </section>
 
@@ -222,31 +190,29 @@
   </section>
 
 
-
 <!-- RECRUIT -->
-<section class="recruit">
-  <div class="inner">
-    <h3 class="db_title">2023's IWPAF 주최 전시회 모집</h3>
-    <div class="left_right_inner">
-      <div class="right">
-        <p class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        <p>모집까지 남은 시간</p>
-        <ul class="timer">
-          <li>
-            <span class="recruit--days">0</span>일
-          </li>
-          <li>
-            <span class="recruit--days">0</span>시
-          </li>
-          <li>
-            <span class="recruit--days">0</span>분
-          </li>
-          <li>
-            <span class="recruit--days">0</span>초
-          </li>
-        </ul>
-      </div>
-      <div class="recruit_slide_wrap left">
+  <section class="recruit">
+    <div class="inner">
+      <h3 class="db_title">2023's IWPAF 주최 전시회 모집</h3>
+      <div class="left_right_inner">
+        <div class="left">
+          <p class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <p>모집까지 남은 시간</p>
+          <ul class="timer">
+            <li>
+              <span class="recruit--days">0</span>일
+            </li>
+            <li>
+              <span class="recruit--days">0</span>시
+            </li>
+            <li>
+              <span class="recruit--days">0</span>분
+            </li>
+            <li>
+              <span class="recruit--days">0</span>초
+            </li>
+          </ul>
+        </div>
         <div class="swiper">
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -255,17 +221,13 @@
             <div class="swiper-slide"><img src="./images/main/art3.png" alt="art4"></div>
             <div class="swiper-slide"><img src="./images/main/art4.jpg" alt="art5"></div>
           </div>
-    
           <!-- If we need navigation buttons -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-        
         </div>
       </div>
     </div>
-  </div>
-
-</section>
+  </section>
 
 
 
@@ -306,7 +268,6 @@
               <label for="text-con" class="text-con-title">내용<span>*</span></label>
               <textarea type="text" id="text-con" rows="4" maxlength="500" placeholder="500자 이내로 입력가능합니다."></textarea>
             </li>
-
           </ul>
           <div class="submit">
             <div class="check">
@@ -323,7 +284,6 @@
       </div>
     </div>
   </section>
-
 
 <!-- FOOTER -->
   <footer>
@@ -392,8 +352,5 @@
   <div id="to-top">
     <span class="material-icons">arrow_upward</span>
   </div>
-
-
-
 </body>
 </html>

@@ -116,7 +116,7 @@ new Swiper('.recruit .swiper', {
   loop: true, 
   autoplay: {delay: 3000}, //
   slidesPerView : 2, // 한 번에 보여줄 슬라이드 수
-  spaceBetween: 20, //슬라이드 사이 여백(간격) px
+  spaceBetween: 60, //슬라이드 사이 여백(간격) px
   centeredSlides: true, // 1번 슬라이드가 가운데 보이기
   navigation: { // 이전/다음 슬라이드 버튼 사용
     nextEl: '.recruit .swiper-button-next',
