@@ -1,0 +1,107 @@
+@charset "utf-8";
+.tab_con, .mo_con{display:none;}
+
+/* tablet */
+@media screen and (min-width:768px) and (max-width:1279px) {
+  /* COMMON */
+  .pc_con {display: none;}
+  .tab_con {display: block;}
+
+  html{
+    font-size: 8px;
+  }
+  .inner {
+    max-width: 768px;
+  }
+  .content{
+    font-size: 2.4rem;
+  }
+  .btn{
+    width: 180px;
+    font-size: 2.0rem;
+    font-weight: 400;
+  }
+
+  /* HRADER */
+  header .header_menu {
+    border-radius: 40px;
+    padding: 0px 16px;
+  }
+  .etc_gnb {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  header .lang{
+    padding: 18px 8px;
+  }
+  header .lang a {
+    font-size: 2.0rem;
+  }
+  .gnb_hambur{
+    position: relative;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+  .gnb_hambur span {
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 4px;
+    background-color: #410060;
+  }
+  .gnb_hambur span.line1{
+    top: 12px;
+    left: 8px;
+    transition: 0.5s;
+  }
+  .gnb_hambur.active span.line1 {
+    top: 8px;
+    left: 10px;
+    width: 30px;
+    transform: rotateZ(45deg);
+    transform-origin: top left;
+  }
+  .gnb_hambur span.line2{
+    bottom: 12px;
+    left: 8px;
+    transition: 0.5s;
+  }
+  .gnb_hambur.active span.line2 {
+    bottom: 8px;
+    left: 10px;
+    width: 30px;
+    transform: rotateZ(-45deg);
+    transform-origin: bottom left;
+  }
+
+
+  /* MAIN */
+  .main-right {
+    padding: 0px 42px;
+  }
+  .main-right .swiper {
+    padding: 0px;
+    margin: 0px 42px;
+    overflow: hidden;
+  }
+
+}/*--------------- tablet ---------------*/
+
+/* mobile */
+@media screen and (max-width:767px){
+  .pc_con {display: none;}
+  .mo_con {display: block;}
+
+}/*--------------- mobile ---------------*/
+
+
+
+/* tablet & mobile */
+@media screen and (max-width:1279px){
+
+
+}/*--------------- tablet & mobile ---------------*/

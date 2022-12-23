@@ -5,7 +5,7 @@ html{
 }
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.4;
   color: #333;
@@ -23,13 +23,13 @@ img {
   display: block;
 }
 h2{
-  font-size: 52px;
+  font-size: 5.2rem;
   margin: 20px 0px;
   font-weight: 900;
   color: #410060;
 }
 h3{
-  font-size: 42px;
+  font-size: 4.2rem;
   font-weight: 700;
   margin-top: 10px;
 }
@@ -42,7 +42,7 @@ h3{
   box-sizing: border-box;
   border: 1px solid #410060;
   border-radius: 32px;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 400;
   text-align: center;
   cursor: pointer;
@@ -82,12 +82,12 @@ h3{
   background-color: #fff;
 } */
 .sub-title{
-  font-size: 24px;
+  font-size: 2.4rem;
   color: #e6006c;
 }
 
 .content{
-  font-size: 20px;
+  font-size: 2.0rem;
   color: #666;
   margin-bottom: 60px;
 }
@@ -98,7 +98,7 @@ h3{
   color: #e6006c;
 }
 h3 {
-  font-size: 42;
+  font-size: 4.2rem;
   font-weight:700;
 }
 .db_title {
@@ -136,7 +136,6 @@ h3 {
   transition-delay: 0.9s;
 }
 
-
 /* header */
 header{
   position: relative;
@@ -149,9 +148,10 @@ header .inner{
   justify-content: space-between;
   align-items: center;
 }
-
-header .inner .gnb{
+header .header_menu {
   display: flex;
+  position: relative;
+  align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 40px;
   background-color: #410060;
@@ -160,7 +160,7 @@ header .inner .gnb{
   position: relative;
   box-sizing: border-box;
 }
-header .inner .gnb .gnb__wrap::before {
+header .inner .header_menu .gnb__wrap::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -173,7 +173,7 @@ header .inner .gnb .gnb__wrap::before {
   visibility: hidden;
   transition: 0.3s;
 }
-header .inner .gnb .gnb__wrap:hover:before {
+header .inner .header_menu:hover .gnb__wrap:before {
   opacity: 1;
   visibility: visible;
 }
@@ -182,7 +182,6 @@ header .inner .gnb .gnb__wrap{
   position: relative;
   z-index: 1;
 }
-
 .gnb__inner{
   height: 65px;
   padding: 20px 0px;
@@ -192,7 +191,7 @@ header .inner .gnb .gnb__wrap{
 }
 .gnb__inner .gnb__1depth{
   color: #fff;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 400;
   position: relative;
   z-index: 1;
@@ -228,7 +227,7 @@ header .gnb__2depth li{
   padding: 6px 0px;
 }
 header .gnb__2depth li a{
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #fff;
   transition: 0.2s;
   position: relative;
@@ -260,25 +259,25 @@ header .bg_nav{
   left: 0;
   border-radius: 0px 0px 20px 20px;
   box-sizing: border-box;
-  background-color: #000;
+  background-color: #410060;
   transition: 0.5s;
 }
 
-header .inner .gnb .lang{
+header .lang{
   display: flex;
   padding: 20px 0px;
   position: relative;
   z-index: 1;
 }
-header .inner .gnb .lang a{
+header .lang a{
   color: #fff;
   padding: 20px 10px;
 }
-header .inner .gnb .lang li:nth-child(2){
+header .lang li:nth-child(2){
   padding-left: 5px;
   position: relative;
 }
-header .inner .gnb .lang li:nth-child(2)::before{
+header .lang li:nth-child(2)::before{
   content: '';
   position: absolute;
   top: 0;
@@ -376,7 +375,7 @@ header .inner .gnb .lang li:nth-child(2)::before{
 }
 .about__img {
   display: flex;
-  column-gap: 50px;
+  justify-content: space-between;
 }
 .about__img li {
   width: 400px;
@@ -465,7 +464,7 @@ header .inner .gnb .lang li:nth-child(2)::before{
   line-height: 80px;
   margin-bottom: 10px;
   color: #fff;
-  font-size: 42px;
+  font-size: 4.2rem;
   background-color: #e6006c;
 }
 
@@ -558,7 +557,7 @@ header .inner .gnb .lang li:nth-child(2)::before{
   background-color: rgba(0, 0, 0, 0);
   display: inline-block;
   border: none;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 400;
   color: #fff;
   outline: none;
@@ -571,7 +570,7 @@ header .inner .gnb .lang li:nth-child(2)::before{
 .survey__right .input-box li.text-con-wrap label.text-con-title {
   width: 100%;
   color: #333;
-  font-size: 18px;
+  font-size: 1.8rem;
   display: block;
   border-bottom: 1px solid #333;
   padding-bottom: 10px;
@@ -588,7 +587,7 @@ header .inner .gnb .lang li:nth-child(2)::before{
   box-sizing: border-box;
   background-color: transparent;
   border: none;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 400;
   font-family: "Arial";
   color: #333;
@@ -612,7 +611,7 @@ header .inner .gnb .lang li:nth-child(2)::before{
   display: inline-block;
   border-radius:4px;
   box-shadow: none;
-  font-size:1em;
+  font-size: 1em;
 }
 .survey__right .submit .check input:hover {
   background-color: #F7E4FF;
@@ -660,7 +659,7 @@ footer .company_info {
   padding-right: 50px;
 }
 footer .company_info li {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #888;
   margin-right: 20px;
   margin-bottom: 10px;
@@ -695,7 +694,7 @@ footer .ft_bottom {
   right: 0;
 }
 footer .ft_inner .ft_bottom .copyright {
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #eee;
   text-align: center;
 } 

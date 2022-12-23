@@ -44,10 +44,11 @@
   
     <!-- 스타일 초기화: 브라우저 별로 다른 기본스타일이 적용되는 것을 초기화 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-    <link rel="stylesheet" href="./css/main.css">
     <!-- 슬라이드 라이브러리 Swiper.js 연결 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 
     <!-- gsap cdn 연결하기 :  순서 주의 (main.js에서 사용하니까 더 앞에 위치) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -74,58 +75,100 @@
         </a>
       </h1>
       <!-- 메인 메뉴 -->
-      <nav class="gnb">
-        <ul class="gnb__wrap">
-          <li class="gnb__inner">
-            <a href="javascript:void(0)" class="gnb__1depth">회사소개</a>
-            <div class="gnb__2depth_wrap">
-              <ul class="gnb__2depth">
-                <li><a href="#">인사말</a></li>
-                <li><a href="#">후원사/협력사</a></li>
-                <li><a href="#">연혁</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="gnb__inner">
-            <a href="javascript:void(0)" class="gnb__1depth">행사소개</a>
-            <div class="gnb__2depth_wrap">
-              <ul class="gnb__2depth">
-                <li><a href="#">전시회</a></li>
-                <li><a href="#">포럼</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="gnb__inner">
-            <a href="javascript:void(0)" class="gnb__1depth">NEW소식</a>
-            <div class="gnb__2depth_wrap">
-              <ul class="gnb__2depth">
-                <li><a href="#">뉴스</a></li>
-                <li><a href="#">공지사항</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="gnb__inner">
-            <a href="javascript:void(0)" class="gnb__1depth">오시는 길</a>
-            <div class="gnb__2depth_wrap">
-              <ul class="gnb__2depth">
-                <li><a href="#">찾아오시는 길</a></li>
-                <li><a href="#">제휴문의</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+      <div class="header_menu">
+        <nav class="gnb pc_con">
+          <ul class="gnb__wrap">
+            <li class="gnb__inner">
+              <a href="javascript:void(0)" class="gnb__1depth">회사소개</a>
+              <div class="gnb__2depth_wrap">
+                <ul class="gnb__2depth">
+                  <li><a href="#">인사말</a></li>
+                  <li><a href="#">후원사/협력사</a></li>
+                  <li><a href="#">연혁</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="gnb__inner">
+              <a href="javascript:void(0)" class="gnb__1depth">행사소개</a>
+              <div class="gnb__2depth_wrap">
+                <ul class="gnb__2depth">
+                  <li><a href="#">전시회</a></li>
+                  <li><a href="#">포럼</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="gnb__inner">
+              <a href="javascript:void(0)" class="gnb__1depth">NEW소식</a>
+              <div class="gnb__2depth_wrap">
+                <ul class="gnb__2depth">
+                  <li><a href="#">뉴스</a></li>
+                  <li><a href="#">공지사항</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="gnb__inner">
+              <a href="javascript:void(0)" class="gnb__1depth">오시는 길</a>
+              <div class="gnb__2depth_wrap">
+                <ul class="gnb__2depth">
+                  <li><a href="#">찾아오시는 길</a></li>
+                  <li><a href="#">제휴문의</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <nav class="etc_gnb tab_con mo_con">
+          <ul>
+            <li>
+              <a href="javascript:void(0)">회사소개</a>
+              <div>
+                <ul>
+                  <li><a href="#">인사말</a></li>
+                  <li><a href="#">후원사/협력사</a></li>
+                  <li><a href="#">연혁</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="javascript:void(0)">행사소개</a>
+              <div>
+                <ul>
+                  <li><a href="#">전시회</a></li>
+                  <li><a href="#">포럼</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="javascript:void(0)">NEW소식</a>
+              <div>
+                <ul>
+                  <li><a href="#">뉴스</a></li>
+                  <li><a href="#">공지사항</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="javascript:void(0)">오시는 길</a>
+              <div>
+                <ul>
+                  <li><a href="#">찾아오시는 길</a></li>
+                  <li><a href="#">제휴문의</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
         <ul class="lang">
           <li><a href="#">KOR</a></li>
           <li><a href="#">ENG</a></li>
         </ul>
-        <div class="gnb_hambur">
+        <div class="gnb_hambur tab_con mo_con">
           <span class="line line1"></span>
           <span class="line line2"></span>
         </div>
-        <div class="gnb_hambur_over">
-        </div>
         <div class="bg_nav"></div>
-      </nav>
+        
+      </div>
   </header>
   
 <!-- MAIN -->

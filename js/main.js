@@ -107,14 +107,8 @@ window.addEventListener('scroll', function () {
 
 
 
-
-
-
-
-
-
 // HEADER - MENU OPEN
-const gnbEl = document.querySelector('.gnb')
+const gnbEl = document.querySelector('.header_menu');
 const mainMenuEl = document.querySelector('.gnb__wrap');
 const subMenuEls = document.querySelectorAll('.gnb__2depth');
 const gnbBg = document.querySelector('.bg_nav');
@@ -141,6 +135,11 @@ gnbEl.addEventListener('mouseleave', function () {
 });
 });
 
+// hamburger btn active
+const hamburBtnEls = document.querySelector('.gnb_hambur');
+hamburBtnEls.addEventListener('click', function () {
+  this.classList.toggle('active');
+});
 
 
 new Swiper('.main-contain .swiper', {
