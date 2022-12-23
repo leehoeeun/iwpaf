@@ -31,14 +31,24 @@ fadeIn.forEach(function(fadeEl, index){
 const thisYear = document.querySelector('.this-year');
 thisYear.textContent = new Date().getFullYear(); 
 
+// SCROLL 위치값 구하기
+window.addEventListener("scroll", (event)=>{
+  const scrollY =this.scrollY;
+  // console.log(scrollY);
+});
+
+
+
 
 // SCROLL TO TOP
 const toTopEl = document.querySelector('#to-top');
+
 toTopEl.addEventListener('click', function () {
   gsap.to(window, 0.6, {
     scrollTo: 0
   });
 });
+
 
 window.addEventListener('scroll', function () {
   if (window.scrollY > 500) {
@@ -46,7 +56,6 @@ window.addEventListener('scroll', function () {
       opacity: 1,
       x: 0
     }); 
-
   } else {
     gsap.to(toTopEl, 0.6, {
       opacity: 0,
@@ -68,6 +77,41 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
     .addTo(new ScrollMagic.Controller()); // 컨트롤러에 장면을 할당
 });
+
+// 질문!!!2022-12-23 왜 scrollY > 400인데 600에 동작하는 이유
+const aboutEls= document.querySelectorAll('ul.scroll-spy');
+console.log(aboutEls);
+
+window.addEventListener('scroll', function () {
+  if(window.scrollY > 400) {
+    new ScrollMagic.Scene({
+    triggerElement: aboutEls
+    })
+    .setClassToggle(aboutEls, 'show')
+    .addTo(new ScrollMagic.Controller());
+  }else {}
+});
+
+
+// aboutEls.forEach(function (aboutEl) {
+//   if(window.scrollY > 800) {
+//     new ScrollMagic.Scene({
+//       triggerElement: aboutEl,
+//     })
+//     .setClassToggle(aboutEl, 'show')
+//     .addTo(new ScrollMagic.Controller());
+//   }else {}
+// });
+
+
+
+
+
+
+
+
+
+
 
 // HEADER - MENU OPEN
 const gnbEl = document.querySelector('.gnb')

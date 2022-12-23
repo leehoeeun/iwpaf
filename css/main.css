@@ -137,7 +137,6 @@ h3 {
 }
 
 
-
 /* header */
 header{
   position: relative;
@@ -422,6 +421,7 @@ header .inner .gnb .lang li:nth-child(2)::before{
 }
 .recruit .inner {
   padding: 100px 0px;
+  overflow: hidden;
 }
 .recruit h3 {
   position: relative;
@@ -441,9 +441,6 @@ header .inner .gnb .lang li:nth-child(2)::before{
   position: relative;
   margin-top: 80px;
   column-gap: 40px;
-}
-.recruit .left {
-
 }
 .recruit .left p.content{
   text-align: left;
@@ -501,6 +498,7 @@ header .inner .gnb .lang li:nth-child(2)::before{
   align-items: center;
   padding: 100px 0px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .survey .inner .survey__left{
   width: 50%;
@@ -725,3 +723,6 @@ footer .ft_inner .ft_bottom .copyright {
   color: #fff;
   /* line-height: 40px; */
 }
+
+
+
