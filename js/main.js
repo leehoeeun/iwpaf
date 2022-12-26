@@ -137,9 +137,15 @@ gnbEl.addEventListener('mouseleave', function () {
 
 // hamburger btn active
 const hamburBtnEls = document.querySelector('.gnb_hambur');
+const etcGnb = document.querySelector('.etc_gnb');
+const etcGnbBg = document.querySelector('.etc_gnb_bg');
+
 hamburBtnEls.addEventListener('click', function () {
   this.classList.toggle('active');
+  etcGnb.classList.toggle('active');
+  etcGnbBg.classList.toggle('active');
 });
+
 
 
 new Swiper('.main-contain .swiper', {
@@ -166,12 +172,13 @@ new Swiper('.recruit .swiper', {
   breakpoints: {
     // when window width is >= 768px
     320: {
+
       slidesPerView: 2,
-      spaceBetween: 0
+      spaceBetween: 60
     },
     768: {
       slidesPerView: 2, // 한 번에 보여줄 슬라이드 수
-      spaceBetween: 0 //슬라이드 사이 여백(간격) px
+      spaceBetween: -100 //슬라이드 사이 여백(간격) px
     },
     // when window width is >= 1280px
     1280: {
