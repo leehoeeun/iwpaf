@@ -157,13 +157,50 @@ new Swiper('.main-contain .swiper', {
 new Swiper('.recruit .swiper', {
   direction: 'horizontal',
   loop: true, 
-  autoplay: {delay: 3000}, //
-  slidesPerView : 2, // 한 번에 보여줄 슬라이드 수
-  spaceBetween: 60, //슬라이드 사이 여백(간격) px
+  autoplay: {delay: 3000},
   centeredSlides: true, // 1번 슬라이드가 가운데 보이기
   navigation: { // 이전/다음 슬라이드 버튼 사용
     nextEl: '.recruit .swiper-button-next',
     prevEl: '.recruit .swiper-button-prev',
   },
+  breakpoints: {
+    // when window width is >= 768px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 0
+    },
+    768: {
+      slidesPerView: 2, // 한 번에 보여줄 슬라이드 수
+      spaceBetween: 0 //슬라이드 사이 여백(간격) px
+    },
+    // when window width is >= 1280px
+    1280: {
+      slidesPerView: 2,
+      spaceBetween: 60
+    },
+  },
 });
+
+
+// 화면 resize될 때 JS
+// const mediaTablet = matchMedia("screen and (max-width: 1279px)");
+// let spaceBetweenRecruit;
+// const swiperSlideEls = document.querySelectorAll('.recruit .swiper-slide');
+
+// mediaTablet.addListener(function (event) {
+//   console.log(event);
+//   if (event.matches) {
+//     console.log('1279 이하');
+//     swiperSlideEls.forEach(function (swiperSlideEl) {
+//       swiperSlideEl.style.marginRight = '0px';
+//     });
+//   } else {
+//     console.log('1279 이상');
+//     swiperSlideEls.forEach(function (swiperSlideEl) {
+//       swiperSlideEl.style.marginRight = '60px';
+//     });
+//   }
+// });
+
+
 

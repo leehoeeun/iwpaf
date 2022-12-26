@@ -12,6 +12,7 @@
   }
   .inner {
     max-width: 768px;
+    padding: 0px 20px;
   }
   .content{
     font-size: 2.4rem;
@@ -24,14 +25,62 @@
 
   /* HRADER */
   header .header_menu {
+    position: static;
     border-radius: 40px;
     padding: 0px 16px;
   }
   .etc_gnb {
+    /* TODO : JS 작업필요 */
+    display: none;
     position: absolute;
-    top: 0;
-    right: 0;
+    z-index: 99;
+    top: 0px;
+    right: 0px;
+    width: 60%;
+    box-sizing: border-box;
+    padding: 90px 30px 0px 30px;
   }
+  .etc_gnb > ul > li {
+    margin-bottom: 20px;
+  }
+  .etc_gnb .etc_gnb__ldepth {
+    display: block;
+    font-size: 2.0rem;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  .etc_gnb_bg {
+    position: fixed;
+    z-index: -1;
+    top: 0px;
+    left: initial;
+    right: 0px;
+    width: 60%;
+    height: 100%;
+    background-color: #410060;
+  }
+  .etc_gnb__2depth_wrap {
+    /* TODO : JS 작업필요 */
+    display: none;
+  }
+  .etc_gnb .etc_gnb__2depth_wrap > li > a {
+    display: block;
+    color: #fff;
+    padding-bottom: 8px;
+  }
+
+
+
+  /* TODO : 삭제 */
+
+
+
+
+
+
+
   header .lang{
     padding: 18px 8px;
   }
@@ -40,7 +89,7 @@
   }
   .gnb_hambur{
     position: relative;
-    z-index: 10;
+    z-index: 999;
     width: 40px;
     height: 40px;
     border-radius: 20px;
@@ -79,6 +128,9 @@
   }
 
 
+
+
+
   /* MAIN */
   .main-right {
     padding: 0px 42px;
@@ -89,12 +141,54 @@
     overflow: hidden;
   }
 
+/* ABOUT */
+.about h3 {
+  margin-bottom: 60px;
+}
+.about .about__img > li {
+  width: 33%;
+  height: 410px;
+}
+.about .about__img .img_float img {
+  width: 100%;
+}
+
+
+
+
+
+
 }/*--------------- tablet ---------------*/
 
 /* mobile */
 @media screen and (max-width:767px){
   .pc_con {display: none;}
   .mo_con {display: block;}
+  
+  .about .about__img {
+    flex-wrap: wrap;
+  }
+  .about .about__img > li {
+    width: 48%;
+    height: 300px;
+  }
+  .about .about__img .img_float img {
+    width: 100%;
+  }
+  .about__img li.about__img_world .img_float {
+    top: 50px;
+  }
+  .about__img li.about__img_peace .img_float {
+    top: 170px;
+  }
+  .about__img li.about__img_art .img_float {
+    top: 30px;
+  }
+  .about__img li .img_float p {
+    display: none;
+  }
+
+
 
 }/*--------------- mobile ---------------*/
 
@@ -102,6 +196,38 @@
 
 /* tablet & mobile */
 @media screen and (max-width:1279px){
+/* RECRUIT */
+.recruit .inner {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.recruit .left_right_inner {
+  flex-direction: column;
+  column-gap: 0px;
+}
+.recruit .left_right_inner {
+  margin-top: 60px;
+}
+.recruit .left_right_inner .left {
+  margin-bottom: 20px;
+}
+.recruit .left p {
+  font-size: 2.0rem;
+  text-align: center;
+  padding-left: 0px;
+}
+.recruit .left .timer {
+  justify-content: center;
+}
+.recruit .swiper{
+  overflow: visible;
+}
+.recruit .swiper .swiper-wrapper {
+  width: 50%;
+}
+.recruit .swiper .swiper-wrapper .swiper-slide {
+  /* width: 308px; */
+}
 
 
 }/*--------------- tablet & mobile ---------------*/
