@@ -1,64 +1,43 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <!-- 문자 인코딩 방식: 유니코드 -->
+
     <meta charset="UTF-8">
-    <!-- 최신 IE 브라우저의 렌더링 방식을 사용하겠다는 의미 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- 모바일 디바이스에서 웹페이지가 표시되는 방식 지정 -->
-    <!-- 뷰포트 너비를 다양한 모바일 디바이스의 가로 너비와 일치시키고, 화면의 확대/축소 100% -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <!-- 오픈 그래프와 트위터 카드 설정 -->
-    <!-- 웹페이지가 검색엔진에서 검색되거나 카카오톡이나 트위터 같은 소셜미디어에 공유될 때 필요한 정보를 제공 -->
-    <!-- 오픈 그래프 -->
+    <meta name="msapplication-TileColor" content="#da532c"> <!-- favicon -->
+    <meta name="theme-color" content="#ffffff"> <!-- favicon -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Heropy Coffee" />
-    <meta property="og:title" content="Heropy Coffee Landing" />
-    <meta property="og:description" content="헤로피커피는 세계에서 가장 큰 다국적 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다." />
+    <meta property="og:site_name" content="IWPAF" />
+    <meta property="og:title" content="IWPAF Landing" />
+    <meta property="og:description" content="Inchoen World Peace Art Festa(IWPAF, 인천세계평화미술제)는 ART를 중심으로 인천시가 예술문화도시와 세계평화도시로의 전환을 염원하기 위해 마련된 축제입니다." />
     <meta property="og:image" content="./images/for_seo.jpg" />
-    <meta property="og:url" content="https://epic-darwin-271c77.netlify.app" />
-    <!-- 트위터 카드 -->
+    <meta property="og:url" content="http://www.iwpaf.com/" />
     <meta property="twitter:card" content="summary" />
-    <meta property="twitter:site" content="Heropy Coffeee" />
-    <meta property="twitter:title" content="Heropy Coffee Landing" />
-    <meta property="twitter:description" content="헤로피커피는 세계에서 가장 큰 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다." />
+    <meta property="twitter:site" content="IWPAF" />
+    <meta property="twitter:title" content="IWPAF Landing" />
+    <meta property="twitter:description" content="Inchoen World Peace Art Festa(IWPAF, 인천세계평화미술제)는 ART를 중심으로 인천시가 예술문화도시와 세계평화도시로의 전환을 염원하기 위해 마련된 축제입니다." />
     <meta property="twitter:image" content="./images/for_seo.jpg" />
-    <meta property="twitter:url" content="https://epic-darwin-271c77.netlify.app" />
-  
-    <title>Star Coffee</title>
-  
-    <!-- 파비콘은 프로젝트 폴더의 최상위(Root) 경로에 포함시키면 자동 적용, 최상위 경로에 없으면 link로 적용 -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  
-    <!-- 구글 웹폰트 연결 -->
-    <!-- 구글 웹폰트: 경량화된 오픈 라이선스 폰트, 한글 지원하는지 확인 및 필요한 굵기만 선택해서 연결 -->
+    <meta property="twitter:url" content="http://www.iwpaf.com/" />
+    <title>IWPAF</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-  
-    <!-- 구글 머티리얼 아이콘 연결 -->
-    <!-- 구글에서 제공하는 머티리얼 스타일의 아이콘, 글자처럼 취급 가능한 장점 -->
-    <!-- 그 외 fontawesome, bootstrap icon 등 다양함 -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-  
-    <!-- 스타일 초기화: 브라우저 별로 다른 기본스타일이 적용되는 것을 초기화 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-    <!-- 슬라이드 라이브러리 Swiper.js 연결 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/responsive.css">
-
-    <!-- gsap cdn 연결하기 :  순서 주의 (main.js에서 사용하니까 더 앞에 위치) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- ScrollMagic.js 연결 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <!-- ScrollToPlugin 연결 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js" integrity="sha512-Eenw6RBFiF4rO89LCaB5fkd4WXI4Y7GSRxrLMMWx73dZNcl+dBU3/pJtITD2gTCoEGIf/Ph3spwp0zZnF+UEJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
 
     <script src="./js/main.js" defer></script>
   </head>
