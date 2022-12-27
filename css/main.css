@@ -361,7 +361,7 @@ header .lang li:nth-child(2)::before{
 
 .about h3 {
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 .about h3::before {
   content: '';
@@ -371,6 +371,9 @@ header .lang li:nth-child(2)::before{
   width: 148px;
   height: 4px;
   background-color: #e6006c;
+}
+.about > .inner > p {
+  margin-bottom: 60px;
 }
 .about__img {
   display: flex;
@@ -450,6 +453,7 @@ header .lang li:nth-child(2)::before{
 }
 .recruit .left .timer {
   display: flex;
+  gap: 10px;
 }
 .recruit .left .timer li {
   text-align: center;
