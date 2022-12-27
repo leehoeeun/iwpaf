@@ -18,6 +18,8 @@ a {
   max-width: 1300px;
   margin: 0 auto;
   position: relative;
+  box-sizing: border-box;
+  padding: 100px 0px;
 }
 img {
   display: block;
@@ -147,6 +149,7 @@ header .inner{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0px;
 }
 header .header_menu {
   display: flex;
@@ -355,10 +358,7 @@ header .lang li:nth-child(2)::before{
 }
 
 /* ABOUT */
-.about .inner {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
+
 .about h3 {
   position: relative;
   margin-bottom: 80px;
@@ -418,7 +418,6 @@ header .lang li:nth-child(2)::before{
   background-color: #F7E4FF;
 }
 .recruit .inner {
-  padding: 100px 0px;
   overflow: hidden;
 }
 .recruit h3 {
@@ -454,7 +453,6 @@ header .lang li:nth-child(2)::before{
 }
 .recruit .left .timer li {
   text-align: center;
-  margin-right: 10px;
 }
 .recruit .left .timer li span {
   display: block;
@@ -494,7 +492,6 @@ header .lang li:nth-child(2)::before{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 0px;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -630,11 +627,12 @@ header .lang li:nth-child(2)::before{
 /* FOOTER */
 footer{
   position: relative;
-  height: 400px;
   color: #fff;
-  padding: 40px 0px;
   box-sizing: border-box;
   background-color: #333;
+}
+footer .inner {
+  padding: 80px 0px 100px;
 }
 footer a {color: #fff;}
 footer .ft_top{
@@ -688,12 +686,12 @@ footer .ft_top__right .ft_2depth_wrap li a{
 }
 footer .ft_bottom {
   position: absolute;
-  bottom: -50px;
+  bottom: 40px;
   left: 0;
   right: 0;
 }
 footer .ft_inner .ft_bottom .copyright {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #eee;
   text-align: center;
 } 

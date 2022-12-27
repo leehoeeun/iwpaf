@@ -69,14 +69,49 @@ const spyEls= document.querySelectorAll('section.scroll-spy');
 
 console.log(spyEls);
 // 메소드 체이닝
-spyEls.forEach(function (spyEl) {
-  new ScrollMagic.Scene({ // 감시할 장면(Scene) 추가 및 옵션 지정
-    triggerElement: spyEl, // 감시할 요소를 지정
-    triggerHook: 0.8 // 화면의 80% 지점에서 보여짐 여부 감시(0~1 사이 지정)
-  })
-    .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
-    .addTo(new ScrollMagic.Controller()); // 컨트롤러에 장면을 할당
+
+const width = window.innerWidth
+const height = window.innerHeight
+const y = window.scrollY
+
+console.log(width, height, y);
+
+window.addEventListener('scroll', function () {
+if(width <= 767) {
+  console.log('360이상');
+  spyEls.forEach(function (spyEl) {
+    new ScrollMagic.Scene({ // 감시할 장면(Scene) 추가 및 옵션 지정
+      triggerElement: spyEl, // 감시할 요소를 지정
+      triggerHook: 1 // 화면의 80% 지점에서 보여짐 여부 감시(0~1 사이 지정)
+    })
+      .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
+      .addTo(new ScrollMagic.Controller()) // 컨트롤러에 장면을 할당
+  });
+
+} else if (width <= 1278) {
+  console.log('768이상');
+  spyEls.forEach(function (spyEl) {
+    new ScrollMagic.Scene({ 
+      triggerElement: spyEl, 
+      triggerHook: 0.9 
+    })
+      .setClassToggle(spyEl, 'show') 
+      .addTo(new ScrollMagic.Controller()) 
+  });
+} else if (width >= 1278) {
+  console.log('1278이상');
+  spyEls.forEach(function (spyEl) {
+    new ScrollMagic.Scene({ 
+      triggerElement: spyEl, 
+      triggerHook: 0.8 
+    })
+      .setClassToggle(spyEl, 'show') 
+      .addTo(new ScrollMagic.Controller()) 
+  });
+}
 });
+
+
 
 // 질문!!!2022-12-23 왜 scrollY > 400인데 600에 동작하는 이유
 const aboutEls= document.querySelectorAll('ul.scroll-spy');
@@ -146,32 +181,19 @@ hamburBtnEls.addEventListener('click', function () {
   this.classList.toggle('active');
   etcGnb.classList.toggle('active');
   etcGnbBg.classList.toggle('active');
-  etcgnbEls.forEach(function (etcgnbEl, index) {
-    etcgnbEl.addEventListener('click', function () {
+});
 
-      etcgnbEls.forEach(function (etcgnbEl, index) {
-        if (etcgnbEl.classList.contains('active')) {
-          console.log(index);
-          etcgnbEl.classList.remove('active');
-        } 
-      });
-      etcgnbEl.classList.add('active');
-
-    })
+etcgnbEls.forEach(function (etcgnbEl, clickIndex) {
+  etcgnbEl.addEventListener('click', function () {
+    console.log(clickIndex);
+    etcgnbEls.forEach(function (etcgnbEl, etcIndex) {
+      console.log(clickIndex, etcIndex);
+      if (clickIndex !== etcIndex) {
+        etcgnbEl.classList.remove('active');
+      }
+    });
+    etcgnbEl.classList.toggle('active');
   });
-  
-    // if(etcGnb.classList.contains('active') && etcgnbEls.classList.contains('active')) {
-    //   etcgnbEls.forEach(function (etcgnbEl) {
-    //     etcgnbEl.addEventListener('click',function () {
-    //       etcgnb2DepthEls.forEach(function (etcgnb2DepthEl) {
-    //         etcgnb2DepthEl.classList.add('active');
-    //       });
-    //     })
-    //   });
-    // }else {
-  
-    // }
-  
 });
 
 
@@ -225,8 +247,8 @@ new Swiper('.recruit .swiper', {
     // when window width is >= 768px
     320: {
 
-      slidesPerView: 2,
-      spaceBetween: 60
+      slidesPerView: 1,
+      spaceBetween: 0
     },
     768: {
       slidesPerView: 2, // 한 번에 보여줄 슬라이드 수
