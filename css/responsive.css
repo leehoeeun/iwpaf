@@ -145,6 +145,9 @@
   }
 
   /* MAIN */
+  .main-left {
+    padding: 0px;
+  }
   .main-right {
     padding: 0px 42px;
   }

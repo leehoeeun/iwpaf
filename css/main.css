@@ -305,7 +305,7 @@ header .lang li:nth-child(2)::before{
 }
 .main-left {
   width: 50%;
-  padding: 97px 0px;
+  padding: 60px 0px;
 }
 .main-contain .btn{
   border: 1px solid #410060;
