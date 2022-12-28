@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +18,7 @@
     <meta property="twitter:description" content="인천세계평화미술제(iwpaf)는 ART를 중심으로 인천시가 예술문화도시와 세계평화도시로의 전환을 염원하기 위해 마련된 축제입니다." />
     <meta property="twitter:image" content="./images/for_seo.jpg" />
     <meta property="twitter:url" content="http://www.iwpaf.com/" />
-    <title>IWPAF</title>
+    <title>IWPAF : 부스신청</title>
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -35,10 +34,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/recruit.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js" integrity="sha512-Eenw6RBFiF4rO89LCaB5fkd4WXI4Y7GSRxrLMMWx73dZNcl+dBU3/pJtITD2gTCoEGIf/Ph3spwp0zZnF+UEJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <!-- 주소검색 -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script src="./js/main.js" defer></script>
   </head>
 <body>
@@ -140,7 +141,193 @@
       </div>
   </header>
   
+  <!-- RECRUIT_PAGE -->
+  <section class="recruit_page">
+    <div class="recruit_page_inner">
+      <h3 class="recruit_page__title">부스 신청서</h3>
+      <div class="recruit_page__container">
+        <div class="essential"><span class="point_pink">*</span>필수입력사항</div>
+        <div class="info__wrap">
+          <div class="gallery_name info">
+            <div class="info_title">
+              <label for="gallery">작가명/갤러리명<span class="point_pink">*</span></label>
+            </div>
+            <div class="input_box">
+              <input id="gallery" type="text" placeholder="작가명, 갤러리명을 입력해주세요." maxlength="20">
+            </div>
+            <div class="btn_info">
+            <!-- <button>
+              <span></span>
+            </button> -->
+            </div>
+          </div>
+          <div class="address_info info">
+            <div class="info_title">
+              <label for="address">주소<span class="point_pink">*</span></label>
+            </div>
+            <div class="input_box">
+              <input type="text" id="address" class="d_form std" placeholder="주소">
+            </div>
+            <div class="btn_info">
+              <input type="button" onclick="sample5_execDaumPostcode()" value="주소 검색" class="d_btn">
+            </div>
+          </div>
+          <div class="phone_number info">
+            <div class="info_title">
+              <label for="phone">휴대폰<span class="point_pink">*</span></label>
+            </div>
+            <div class="input_box">
+              <input id="phone" type="number" placeholder="숫자만 입력해주세요." maxlength="11">
+            </div>
+            <div class="btn_info obtain">
+              <button>
+                <span>인증번호받기</span>
+              </button>
+            </div>
+          </div>
+          <div class="phone_number_obtain info">
+            <div class="info_title">
+              <label></label>
+            </div>
+            <div class="input_box">
+              <input type="number" placeholder="인증번호를 입력해주세요." maxlength="5">
+              <span><span>03:00</span></span>
+            </div>
+            <div class="btn_info">
+              <button>
+                <span>인증번호확인</span>
+              </button>
+            </div>
+          </div>
+          <div class="fax_number info">
+            <div class="info_title">
+              <label for="fax_number">Fax<span></span></label>
+            </div>
+            <div class="input_box">
+              <input id="fax_number" type="number" placeholder="숫자만 입력해주세요." maxlength="11">
+            </div>
+            <div class="btn_info obtain">
+              <!-- <button>
+                <span></span>
+              </button> -->
+            </div>
+          </div>
+          <div class="email_add info">
+            <div class="info_title">
+              <label for="re_email">이메일<span class="point_pink">*</span></label>
+            </div>
+            <div class="input_box">
+              <input id="re_email" type="text" placeholder="예: iwpaf@iwpaf.com" maxlength="30">
+            </div>
+            <div class="btn_info">
+              <!-- <button>
+                <span></span>
+              </button> -->
+            </div>
+          </div>
+          <div class="applicant info">
+            <div class="info_title">
+              <label for="applicant">신청자명<span class="point_pink">*</span></label>
+            </div>
+            <div class="input_box">
+              <input id="applicant" type="text" placeholder="신청자 본인의 이름을 입력해주세요." maxlength="11">
+            </div>
+            <div class="btn_info">
+              <!-- <button>
+                <span></span>
+              </button> -->
+            </div>
+          </div>
+        </div>
+        <div class="booth">
+          <div class="info_title">
+            부스타입<span class="point_pink">*</span>
+          </div>
+          <div class="input_box">
+            <div class="booth_choice">
+              <input type="checkbox" id="booth_a" name="booth_a" value="a_type">
+              <label for="booth_a">A타입(4x7x4m)</label>
+              <!-- <input type="checkbox" id="booth_b" name="booth_b" value="b_type">
+              <label for="booth_b">B타입(4x7x4m)</label> -->
+              <p>부스크기는 다소 차이가 있을 수 있습니다.</p>
+            </div>
+          </div>
+          <div class="btn_info">
+            <!-- <button>
+              <span></span>
+            </button> -->
+          </div>
+        </div>
+        <div class="account">
+          <div class="account_1">
+            <div class="account__title">납부계좌</div>
+            <div>
+              <div class="acount__back">국민은행</div>
+              <div class="acount__num">1234-1234-123456</div>
+            </div>
+            <div>
+              <div class="acount__back">국민은행</div>
+              <div class="acount__num">1234-1234-123456</div>
+            </div>
+          </div>
+          <div class="account_2">
+            <div class="account__title">납부일정</div>
+            <div>
+              <div class="acount__text">계약 후 100만원 납입, 심사통과 후 14일 이내 50% 납입</div>
+            </div>
+          </div>
+          <div class="account_3">
+            <div class="account__title">잔금납부</div>
+            <div>
+              <div class="acount__text">2023년 04월 05일 이내 완납</div>
+            </div>
+          </div>
+        </div>
+        <div class="user_agree">
+          <div class="">
+            <div class="info_title user_agree__title">
+              이용약관동의<span class="point_pink">*</span>
+            </div>
+            <div class="user_agree__box">
+              <div class="agree1 agree">
+                <input type="checkbox" id="all_agree" name="all_agree" value="all">
+                <label for="all_agree">전체 동의합니다.</label>
+                <p>선택항목에 동의하지 않은 경우도 부스신청을 할 수 있습니다.</p>
+              </div>
+              <div class="agree2 agree">
+                <input type="checkbox" id="private_agree_essen" name="private_agree_essen" value="private_essen">
+                <label for="private_agree_essen">개인정보 수집∙이용 동의</label>
+                <span>(필수)</span>
+              </div>
+              <div class="agree3 agree">
+                <input type="checkbox" id="private_agree" name="private_agree" value="private">
+                <label for="private_agree">개인정보 수집∙이용 동의</label>
+                <span>(선택)</span>
+              </div>
+            </div>
+            <div class="sign">
+              <div>
+                <label for="promise_agree">이면의 전시회 참가 약정을 수락하고 모든 전시회 관련 규정을 준수할 것을 약속합니다.</label>
+                <span>(필수)</span>
+              </div>
+              <div class="sign__date">
+                <span class="sign__yy"></span>년
+                <span class="sign__mm"></span>월
+                <span class="sign__dd"></span>일
+              </div>
+              <div>
+                <span>성명 :</span>
+                <input type="text" id="promise_agree" name="promise_agree" placeholder="본인 성명을 정자로 입력해주세요.">
+                <span>(인)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- <span> 인증번호가 오지 않는다면, 통신사 스팸 차단 서비스 혹은 휴대폰 번호 차단 여부를 확인해주세요. (컬리 1644-1107) </span> -->
 
 <!-- FOOTER -->
   <footer>
