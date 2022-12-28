@@ -192,6 +192,7 @@
   .recruit .left .timer {
     justify-content: center;
     gap: 10px;
+    margin-bottom: 20px;
   }
 /* FOOTER */
 footer {
@@ -405,6 +406,7 @@ footer .ft_bottom {
   .recruit .left .timer {
     justify-content: center;
     gap: 8px;
+    margin-bottom: 20px;
   }
   .recruit .left .timer li span {
     width: 70px;
@@ -651,6 +653,7 @@ footer .ft_bottom {
     justify-content: center;
     gap: 8px;
   }
+
   .recruit .left .timer li span {
     width: 70px;
     height: 70px;
@@ -703,7 +706,9 @@ footer .ft_bottom {
 /* tablet & mobile */
 @media screen and (max-width:1279px){
 /* RECRUIT */
-
+.recruit .left .btn {
+  margin: 0px auto;
+}
 .recruit .left_right_inner {
   flex-direction: column;
   column-gap: 0px;

@@ -454,6 +454,7 @@ header .lang li:nth-child(2)::before{
 .recruit .left .timer {
   display: flex;
   gap: 10px;
+  margin-bottom: 40px;
 }
 .recruit .left .timer li {
   text-align: center;
@@ -468,7 +469,9 @@ header .lang li:nth-child(2)::before{
   font-size: 4.2rem;
   background-color: #e6006c;
 }
-
+.recruit .left .btn {
+  margin-left: 64px ;
+}
 /* !!!슬라이드!!! */
 
 .recruit div.right .swiper {
