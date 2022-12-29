@@ -319,3 +319,38 @@ new Swiper('.recruit .swiper', {
 
 // 마감일 : 2023년 3월 31일 17시 00분
 // sunslee@naver.com
+
+
+// 타이머 만들기
+const recruitDate = document.querySelector(".recruit--days");
+const recruitHours = document.querySelector(".recruit--hours");
+const recruitMinutes = document.querySelector(".recruit--minutes");
+const recruitSeconds = document.querySelector(".recruit--seconds");
+
+function thatDay() {
+  const finishTime = new Date("2023-03-31T17:00:00");
+  const todyaDate = new Date();
+  const remainDate = finishTime - todyaDate;
+  // console.log(finishTime);
+  // console.log(todyaDate);
+
+  // const remainDay = Math.floor(remainDate / (1000*60*60*24));
+  // const remainHour = Math.floor((remainDate / (1000*60*60)) % 24);
+  // const remainMin = Math.floor((remainDate / (1000*60)) % 60);
+  // const remainSec = Math.floor(remainDate / 1000 % 60);
+
+  const remainDay = String(Math.floor(remainDate / (1000*60*60*24))).padStart(2,"0");
+  const remainHour =String(Math.floor((remainDate / (1000*60*60)) % 24)).padStart(2,"0");
+  const remainMin = String(Math.floor((remainDate / (1000*60)) % 60)).padStart(2,"0");
+  const remainSec = String(Math.floor(remainDate / 1000 % 60)).padStart(2,"0");
+
+  // recruitDate.innerText = '${remainDay}';
+  recruitDate.textContent = remainDay;
+  recruitHours.textContent = remainHour;
+  recruitMinutes.textContent = remainMin;
+  recruitSeconds.textContent = remainSec;
+}
+
+
+thatDay();
+setInterval(thatDay, 1000);
