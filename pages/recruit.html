@@ -23,11 +23,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="manifest" href="/images/site.webmanifest">
     <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
@@ -41,6 +42,7 @@
     <!-- 주소검색 -->
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script src="/js/main.js" defer></script>
+    <script src="/js/recruit.js" defer></script>
   </head>
 <body>
     <!-- HEADER -->
@@ -238,53 +240,73 @@
               </button> -->
             </div>
           </div>
-        </div>
-        <div class="booth">
-          <div class="info_title">
-            부스타입<span class="point_pink">*</span>
-          </div>
-          <div class="input_box">
-            <div class="booth_choice">
-              <input type="checkbox" id="booth_a" name="booth_a" value="a_type">
-              <label for="booth_a">A타입(4x7x4m)</label>
-              <!-- <input type="checkbox" id="booth_b" name="booth_b" value="b_type">
-              <label for="booth_b">B타입(4x7x4m)</label> -->
-              <p>부스크기는 다소 차이가 있을 수 있습니다.</p>
+          <div class="booth">
+            <div class="info_title">
+              부스타입<span class="point_pink">*</span>
+            </div>
+            <div class="input_box">
+              <div class="booth_choice">
+                <div class="booth_box booth_a">
+                  <input type="checkbox" id="booth_a" name="booth_a" value="a_type">
+                  <label for="booth_a">A타입(4x7x4m)</label>
+                </div>
+                <div class="booth_box booth_b">
+                  <input type="checkbox" id="booth_b" name="booth_b" value="b_type">
+                  <label for="booth_b">B타입(7x10x7m)</label>
+                </div>
+                <p>부스크기는 다소 차이가 있을 수 있습니다.</p>
+              </div>
+            </div>
+            <div class="btn_info">
+              <!-- <button>
+                <span></span>
+              </button> -->
             </div>
           </div>
-          <div class="btn_info">
-            <!-- <button>
-              <span></span>
-            </button> -->
+          <div class="recruit_content_wrap info">
+            <div class="info_title">
+              <label for="recruit_content">내용<span class="point_pink"></span></label>
+            </div>
+            <div class="input_box">
+              <textarea type="text" id="recruit_content" maxlength="500" placeholder="500자 이내로 입력가능합니다. 문의사항이나 하고 싶은 말을 입력해주세요."></textarea>
+            </div>
+            <div class="btn_info">
+              <!-- <button>
+                <span></span>
+              </button> -->
+            </div>
           </div>
         </div>
-        <div class="account">
-          <div class="account_1">
+
+        <div class="account_wrap">
+          <div class="account_1 account">
             <div class="account__title">납부계좌</div>
-            <div>
-              <div class="acount__back">국민은행</div>
-              <div class="acount__num">1234-1234-123456</div>
-            </div>
-            <div>
-              <div class="acount__back">국민은행</div>
-              <div class="acount__num">1234-1234-123456</div>
+            <div class="acount__bank">
+              <div>
+                <span>국민은행</span>
+                <span>1234-1234-123456</span>
+              </div>
+              <div>
+                <span>국민은행</span>
+                <span>1234-1234-123456</span>
+              </div>
             </div>
           </div>
-          <div class="account_2">
+          <div class="account_2 account">
             <div class="account__title">납부일정</div>
-            <div>
-              <div class="acount__text">계약 후 100만원 납입, 심사통과 후 14일 이내 50% 납입</div>
+            <div class="acount__text">
+              <div>계약 후 100만원 납입, 심사통과 후 14일 이내 50% 납입</div>
             </div>
           </div>
-          <div class="account_3">
+          <div class="account_3 account">
             <div class="account__title">잔금납부</div>
             <div>
               <div class="acount__text">2023년 04월 05일 이내 완납</div>
             </div>
           </div>
         </div>
-        <div class="user_agree">
-          <div class="">
+        <div class="user_agree_wrap">
+          <div class="user_agree">
             <div class="info_title user_agree__title">
               이용약관동의<span class="point_pink">*</span>
             </div>
@@ -305,21 +327,35 @@
                 <span>(선택)</span>
               </div>
             </div>
-            <div class="sign">
-              <div>
-                <label for="promise_agree">이면의 전시회 참가 약정을 수락하고 모든 전시회 관련 규정을 준수할 것을 약속합니다.</label>
-                <span>(필수)</span>
-              </div>
+          </div>
+          <div class="user_sign">
+            <div class="sign_text">
+              <label for="promise_agree">이면의 전시회 참가 약정을 수락하고 모든 전시회 관련 규정을 준수할 것을 약속합니다.</label>
+              <span>(필수)</span>
+            </div>
+            <div class="user_sign__bottom">
               <div class="sign__date">
                 <span class="sign__yy"></span>년
                 <span class="sign__mm"></span>월
                 <span class="sign__dd"></span>일
               </div>
-              <div>
+              <div class="sign_name">
                 <span>성명 :</span>
-                <input type="text" id="promise_agree" name="promise_agree" placeholder="본인 성명을 정자로 입력해주세요.">
+                <input type="text" id="promise_agree" name="promise_agree" placeholder="예: 홍길동">
                 <span>(인)</span>
               </div>
+            </div>
+          </div>
+          <div class="recruit_button">
+            <div class="btn_fix_white">
+              <a href="javascript:void(0)">
+                <span>취소</span>
+              </a>
+            </div>
+            <div class="btn_fix_puple">
+              <a href="javascript:void(0)">
+                <span>신청하기</span>
+              </a>
             </div>
           </div>
         </div>

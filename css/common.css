@@ -78,6 +78,57 @@ h3{
   border-radius: 32px;
   background-color: #410060;
 }
+.btn_fix_white {
+  display: block;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  box-sizing: border-box;
+  border: 1px solid #410060;
+  border-radius: 32px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s, color 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+.btn_fix_white > a > span {
+  color: #410060;
+  border-bottom: 1px solid transparent;
+  padding: 0px 16px;
+  transition: 0.3s;
+}
+.btn_fix_white:hover > a > span {
+  border-bottom: 1px solid #410060;
+}
+.btn_fix_puple {
+  display: block;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  box-sizing: border-box;
+  border: 1px solid #410060;
+  border-radius: 32px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s, color 0.4s;
+  position: relative;
+  overflow: hidden;
+  background-color: #410060;
+}
+.btn_fix_puple > a > span {
+  color: #fff;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+.btn_fix_puple:hover > a > span {
+  border-bottom: 1px solid #fff;
+}
+
 
 /* .btn:hover{
   color: #333;
@@ -348,6 +399,9 @@ footer .ft_top__right .ft_1depth_wrap {
 }
 footer .ft_top__right .ft_2depth_wrap li {
   margin-bottom: 10px;
+}
+footer .ft_top__right .ft_2depth_wrap li:hover a {
+  border-bottom: 1px solid #888;
 }
 footer .ft_top__right .ft_2depth_wrap li a{
   color: #888;

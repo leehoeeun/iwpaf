@@ -70,46 +70,61 @@ const spyEls= document.querySelectorAll('section.scroll-spy');
 console.log(spyEls);
 // 메소드 체이닝
 
-const width = window.innerWidth
+
 const height = window.innerHeight
 const y = window.scrollY
 
-console.log(width, height, y);
+
+// TODO : resize 됨에 따라 화면 너비가 console에 찍히게 하는 방법 
+// window.addEventListener('resize', function () {
+//   const width = window.innerWidth
+//   console.log(width, height, y);
+//   console.log(width); // resize 함수 밖에 있으면 처음 창을 열 때 width값만 인식하지만, resize function 안에 있으면, resize 될 때 마다 function이 동작해서 계속 변경되는 width값을 console에 찍는다 
+// if(width <= 767) {
+//   console.log('360이상');
+//   spyEls.forEach(function (spyEl) {
+//     new ScrollMagic.Scene({ 
+//       triggerElement: spyEl,
+//       triggerHook: 1 
+//     })
+//       .setClassToggle(spyEl, 'show') 
+//       .addTo(new ScrollMagic.Controller()) 
+//   });
+
+// } else if (width <= 1278) {
+//   console.log('768이상');
+//   spyEls.forEach(function (spyEl) {
+//     new ScrollMagic.Scene({ 
+//       triggerElement: spyEl, 
+//       triggerHook: 0.9 
+//     })
+//       .setClassToggle(spyEl, 'show') 
+//       .addTo(new ScrollMagic.Controller()) 
+//   });
+// } else if (width >= 1278) {
+//   console.log('1278이상');
+//   spyEls.forEach(function (spyEl) {
+//     new ScrollMagic.Scene({ 
+//       triggerElement: spyEl, 
+//       triggerHook: 0.8 
+//     })
+//       .setClassToggle(spyEl, 'show') 
+//       .addTo(new ScrollMagic.Controller()) 
+//   });
+// }
+// });
+
 
 window.addEventListener('scroll', function () {
-if(width <= 767) {
-  console.log('360이상');
-  spyEls.forEach(function (spyEl) {
-    new ScrollMagic.Scene({ // 감시할 장면(Scene) 추가 및 옵션 지정
-      triggerElement: spyEl, // 감시할 요소를 지정
-      triggerHook: 1 // 화면의 80% 지점에서 보여짐 여부 감시(0~1 사이 지정)
-    })
-      .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
-      .addTo(new ScrollMagic.Controller()) // 컨트롤러에 장면을 할당
+spyEls.forEach(function (spyEl) {
+  new ScrollMagic.Scene({ // 감시할 장면(Scene) 추가 및 옵션 지정
+    triggerElement: spyEl, // 감시할 요소를 지정
+    triggerHook: 0.8 // 화면의 80% 지점에서 보여짐 여부 감시(0~1 사이 지정)
+  })
+    .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
+    .addTo(new ScrollMagic.Controller()) // 컨트롤러에 장면을 할당
+})
   });
-
-} else if (width <= 1278) {
-  console.log('768이상');
-  spyEls.forEach(function (spyEl) {
-    new ScrollMagic.Scene({ 
-      triggerElement: spyEl, 
-      triggerHook: 0.9 
-    })
-      .setClassToggle(spyEl, 'show') 
-      .addTo(new ScrollMagic.Controller()) 
-  });
-} else if (width >= 1278) {
-  console.log('1278이상');
-  spyEls.forEach(function (spyEl) {
-    new ScrollMagic.Scene({ 
-      triggerElement: spyEl, 
-      triggerHook: 0.8 
-    })
-      .setClassToggle(spyEl, 'show') 
-      .addTo(new ScrollMagic.Controller()) 
-  });
-}
-});
 
 
 
@@ -117,15 +132,29 @@ if(width <= 767) {
 const aboutEls= document.querySelectorAll('ul.scroll-spy');
 console.log(aboutEls);
 
+// window.addEventListener('scroll', function () {
+//   if(window.scrollY > 400) {
+//     new ScrollMagic.Scene({
+//     triggerElement: aboutEls
+//     })
+//     .setClassToggle(aboutEls, 'show')
+//     .addTo(new ScrollMagic.Controller());
+//   }else {}
+// });
+
 window.addEventListener('scroll', function () {
-  if(window.scrollY > 400) {
-    new ScrollMagic.Scene({
-    triggerElement: aboutEls
+  aboutEls.forEach(function (aboutEl) {
+    new ScrollMagic.Scene({ // 감시할 장면(Scene) 추가 및 옵션 지정
+      triggerElement: aboutEl, // 감시할 요소를 지정
+      triggerHook: 0.8 // 화면의 80% 지점에서 보여짐 여부 감시(0~1 사이 지정)
     })
-    .setClassToggle(aboutEls, 'show')
-    .addTo(new ScrollMagic.Controller());
-  }else {}
-});
+      .setClassToggle(aboutEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
+      .addTo(new ScrollMagic.Controller()) // 컨트롤러에 장면을 할당
+  })
+    });
+  
+
+
 
 
 // aboutEls.forEach(function (aboutEl) {
@@ -265,6 +294,7 @@ new Swiper('.recruit .swiper', {
 
 // 화면 resize될 때 JS
 // const mediaTablet = matchMedia("screen and (max-width: 1279px)");
+// const mediaMobile = matchMedia("screen and (max-width: 767px) and (min-width: 360px)");
 // let spaceBetweenRecruit;
 // const swiperSlideEls = document.querySelectorAll('.recruit .swiper-slide');
 
@@ -282,7 +312,9 @@ new Swiper('.recruit .swiper', {
 //     });
 //   }
 // });
+// mediaMobile.addListener(
 
+// );
 
 
 // 마감일 : 2023년 3월 31일 17시 00분
