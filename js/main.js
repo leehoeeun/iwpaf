@@ -329,10 +329,10 @@ const recruitSeconds = document.querySelector(".recruit--seconds");
 
 function thatDay() {
   const finishTime = new Date("2023-03-31T17:00:00");
-  const todyaDate = new Date();
-  const remainDate = finishTime - todyaDate;
+  const todayDate = new Date();
+  const remainDate = finishTime - todayDate;
   // console.log(finishTime);
-  // console.log(todyaDate);
+  
 
   // const remainDay = Math.floor(remainDate / (1000*60*60*24));
   // const remainHour = Math.floor((remainDate / (1000*60*60)) % 24);
@@ -349,7 +349,9 @@ function thatDay() {
   recruitHours.textContent = remainHour;
   recruitMinutes.textContent = remainMin;
   recruitSeconds.textContent = remainSec;
+  
 }
+console.log(recruitDate);
 
 
 thatDay();
