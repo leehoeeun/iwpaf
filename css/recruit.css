@@ -258,8 +258,8 @@ header .header_menu {
   column-gap: 20px;
 }
 
-/* mobile 가로 ~679px*/
-@media screen and (max-width:679px){
+/* mobile 가로 480~767px*/
+@media screen and (max-width:767px){
 
 
 
@@ -268,7 +268,7 @@ header .header_menu {
 
 
 
-/* mobile 세로 */
+/* mobile 세로 0~479px */
 @media screen and (max-width:479px){
 
 
